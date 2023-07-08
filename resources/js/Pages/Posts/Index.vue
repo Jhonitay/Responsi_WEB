@@ -46,9 +46,9 @@ function destroy(id) {
                             <!-- Baris 1 -->
                             <tr v-for="post in posts" >
                                 <td class="px-6 py-4 whitespace-nowrap">{{ post.id }}</td>
-                                <td class="px-6 py-4 whitespace-nowrap">{{ post.judul }}</td>
+                                <td class="px-6 py-4 ">{{ post.judul }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ post.kategori }}</td>
-                                <td class="px-6 py-4 whitespace-nowrap">{{ post.konten }}</td>
+                                <td class="px-6 py-4 ">{{ post.konten }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap"> {{ post.creted_at }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">{{ post.penulis }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap">

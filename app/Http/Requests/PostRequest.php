@@ -22,7 +22,7 @@ class PostRequest extends FormRequest
             'kategori' => ['string', 'max:255'],
 
             // Validasi aturan untuk 'konten' (string dengan maksimal 255 karakter)
-            'konten' => ['string', 'max:255'],
+            'konten' => ['string', 'max:2000'],
 
             // Validasi aturan untuk 'penulis' (string dengan maksimal 255 karakter)
             'penulis' => ['string', 'max:255'],

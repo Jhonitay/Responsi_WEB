@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -18,21 +19,8 @@ use Inertia\Inertia;
 */
 
 // Mengatur rute untuk halaman utama
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        // Menentukan apakah opsi login tersedia dengan memeriksa rute 'login'
-        'canLogin' => Route::has('login'),
-        
-        // Menentukan apakah opsi registrasi tersedia dengan memeriksa rute 'register'
-        'canRegister' => Route::has('register'),
-        
-        // Menyertakan versi Laravel saat ini
-        'laravelVersion' => Application::VERSION,
-        
-        // Menyertakan versi PHP saat ini
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/', [FrontController::class, 'index']);
+
 
 // Mengatur rute untuk halaman dashboard
 Route::get('/dashboard', function () {
